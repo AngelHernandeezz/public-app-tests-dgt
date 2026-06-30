@@ -109,6 +109,7 @@
     box-shadow:0 8px 20px -8px rgba(232,114,44,.55);
     transition:transform .15s ease, box-shadow .15s ease;
     width: 300px; 
+    text-decoration: none; /* Asegura que no tenga subrayado de enlace */
   }
 
   .boton-descarga:hover{
@@ -232,20 +233,20 @@
     <header class="hero">
       <div class="hero-inner">
         <div class="logo-col">
-          <img src="logo_circular.png" alt="Autoescuela AHE">
+          <img src="Logo circular.png" alt="Autoescuela AHE">
         </div>
         <div class="texto-col">
           <h1 class="titular">Deja de memorizar. <br> Empieza a entender.</h1>
           <p class="subtitular">Descarga el sistema de tests de Autoescuela AHE para entender las preguntas, aprender las trampas y aprobar a la primera.</p>
 
-          <button class="boton-descarga" id="botonDescargar" type="button">
+          <a class="boton-descarga" href="https://github.com/AngelHernandeezz/public-app-tests-dgt/releases/download/Launcher/LauncherAhevia.rar" download>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 3v12"/>
               <path d="M7 11l5 5 5-5"/>
               <path d="M5 21h14"/>
             </svg>
             Descargar
-          </button>
+          </a>
         </div>
       </div>
     </header>
@@ -288,19 +289,6 @@
     <footer>Temario homologado por la DGT - Autoescuela AHE</footer>
 
   </div>
-
-<script>
-document.getElementById('botonDescargar').addEventListener('click', function(){
-  var contenido = "Sistema de Tests Autoescuela AHE\n\nEste es un archivo de ejemplo.\nAquí se entregará el proyecto completo.";
-  var blob = new Blob([contenido], {type:"text/plain;charset=utf-8"});
-  var enlace = document.createElement('a');
-  enlace.href = URL.createObjectURL(blob);
-  enlace.download = "Proyecto_AHE.txt";
-  document.body.appendChild(enlace);
-  enlace.click();
-  document.body.removeChild(enlace);
-});
-</script>
 
 </body>
 </html>
